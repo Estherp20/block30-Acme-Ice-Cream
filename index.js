@@ -64,9 +64,9 @@ const init = async () => {
     CREATE TABLE flavors(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NULL,
-    created_at timestamp default now(),
-    updated_at timestamp default now(),
-    is_favorite boolean default false not null);
+    created_at TIMESTAMP DEFAULT now(),
+    updated_at TIMESTAMP DEFAULT now(),
+    is_favorite BOOLEAN DEFAULT FALSE not null);
     `;
     await client.query(SQL);
     console.log('tables created');
